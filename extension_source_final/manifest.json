@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "noclicknext",
+	"version": "1.0",
+	"description": "Runs noclicknext.",
+	"icons": {
+		"38": "icons/icon-38.png"
+	},
+	
+	"browser_action": {"default_icon": "icons/icon-38-grey.png"},
+	
+	"background": {
+		"scripts": ["jquery-3.2.0.min.js", 
+		"whitelist.js", 
+		"background_script.js", 
+		"noclicknext.js"]
+	},
+	
+	"content_scripts": [{
+			"matches": ["*://alek.us/redirect.html"],
+			"js": ["jquery-3.2.0.min.js", "redirect_content_script.js"]
+	}],
+	
+	"permissions": ["tabs"]
+}
