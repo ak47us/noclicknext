@@ -12,7 +12,7 @@ function noclicknext(){
 		type: "noclicknextURLMessage"
 	};
 	
-	var newTab = browser.tabs.create({ url:"alek.us:42069/redirect.html" });
+	var newTab = browser.tabs.create({ url:"test.com:40000/redirect.html" });
 	
 	setTimeout(function(){ //Timeout so redirect
 		browser.tabs.sendMessage(
